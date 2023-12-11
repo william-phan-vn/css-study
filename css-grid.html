@@ -14,7 +14,7 @@
       }
       .el--3 {
         background-color: green;
-        height: 150px;
+        height: 150px; 
       }
       .el--4 {
         background-color: goldenrod;
@@ -33,13 +33,19 @@
       }
 
       .container--1 {
+        display: none;
         /* STARTER */
         font-family: sans-serif;
         background-color: #ddd;
-        font-size: 40px;
+        font-size: 30px;
         margin: 40px;
 
         /* CSS GRID */
+        grid-template-columns: repeat(4, 1fr);
+        /* grid-template-rows: 300px 200px; */
+        grid-template-rows: 1fr 1fr;
+        column-gap: 30px;
+        row-gap: 40px;
       }
 
       .container--2 {
@@ -47,12 +53,24 @@
         font-family: sans-serif;
         background-color: black;
         font-size: 40px;
-        margin: 100px;
+        margin: 40px;
 
-        width: 1000px;
+        width: 700px;
         height: 600px;
 
         /* CSS GRID */
+        display: grid;
+        grid-template-columns: 125px 200px 125px;
+        grid-template-rows: 250px 100px;
+        gap: 50px;
+
+        /* Align tracks inside container */
+        justify-content: center;
+        align-content: center;
+
+        /* Aligning items INSIDE cells: moving items around inside cells */
+        align-items: center;
+        justify-items: center;
       }
     </style>
   </head>
